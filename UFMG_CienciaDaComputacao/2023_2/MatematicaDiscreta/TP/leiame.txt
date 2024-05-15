@@ -1,0 +1,51 @@
+Para compilar os programas em um ambiente Linux ou no Windows Subsystem for Linux (WSL), siga estas etapas:
+
+    Compilação:
+
+        Primeiro, navegue até a pasta do projeto e utilize os seguintes comandos:
+
+        Para compilar o programa "espquadrada.c":
+            gcc -o espquadrada espquadrada.c -lm
+
+        E para compilar o programa "esptriangular.c":
+            gcc -o esptriangular esptriangular.c -lm
+        
+        Esses comandos gerarão os executáveis "espquadrada" e "esptriangular". 
+    
+    Execução:
+
+        Depois de compilar os programas, você pode executá-los da seguinte maneira:
+
+        Para executar "espquadrada":
+            ./espquadrada
+
+        Para executar "esptriangular":
+            ./esptriangular
+        
+        Quando o programa estiver em execução, insira um valor válido para o ponto e pressione ENTER. O programa retornará as coordenadas.
+
+
+Para compilar e executar os programas em um ambiente Windows, utilize esses comandos:
+
+    Compilação:
+
+        Para compilar o programa "espquadrada.c" no ambiente Windows:
+            gcc -o espquadrada espquadrada.c -lm
+        
+        Para compilar o programa "esptriangular.c" no ambiente Windows:
+            gcc -o esptriangular esptriangular.c -lm
+        
+        Esses comandos gerarão os executáveis "espquadrada.exe" e "esptriangular.exe".
+    
+    Execução:
+
+        Para executar os programas compilados no Windows:
+
+        Para executar "espquadrada":
+            ./espquadrada.exe
+        
+        Para executar "esptriangular":
+            ./esptriangular.exe
+    
+    Certifique-se de que o GCC (GNU Compiler Collection) esteja instalado em seu ambiente Windows para compilar e executar os programas.
+    
