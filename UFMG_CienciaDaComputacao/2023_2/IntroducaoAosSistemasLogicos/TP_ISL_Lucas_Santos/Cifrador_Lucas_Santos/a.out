@@ -1,0 +1,233 @@
+#! /usr/share/iverilog-0.9.7/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_6)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x1121800 .scope module, "cifra" "cifra" 2 2;
+ .timescale 0 0;
+P_0x1120838 .param/l "BITS" 2 2, +C4<01000000>;
+v0x114c4c0_0 .var "a", 0 0;
+v0x114c560_0 .var "b", 0 0;
+v0x114c610_0 .var/i "bits_counter", 31 0;
+v0x114c690_0 .var/i "bits_per_group", 31 0;
+v0x114c740_0 .var/i "i", 31 0;
+v0x114c7c0_0 .var "in", 63 0;
+v0x114c8a0_0 .var "otp", 31 0;
+v0x114c940_0 .net "out", 0 0, L_0x114d950; 1 drivers
+S_0x112f630 .scope module, "xorg" "xor_gate" 2 13, 3 2, S_0x1121800;
+ .timescale 0 0;
+L_0x114d660 .functor NOT 1, v0x114c4c0_0, C4<0>, C4<0>, C4<0>;
+L_0x114d740 .functor NOT 1, v0x114c560_0, C4<0>, C4<0>, C4<0>;
+L_0x114d7f0 .functor AND 1, L_0x114d660, v0x114c560_0, C4<1>, C4<1>;
+L_0x114d8a0 .functor AND 1, v0x114c4c0_0, L_0x114d740, C4<1>, C4<1>;
+L_0x114d950 .functor OR 1, L_0x114d7f0, L_0x114d8a0, C4<0>, C4<0>;
+v0x112f720_0 .net "a", 0 0, v0x114c4c0_0; 1 drivers
+v0x114c0b0_0 .net "a_bar", 0 0, L_0x114d660; 1 drivers
+v0x114c150_0 .net "b", 0 0, v0x114c560_0; 1 drivers
+v0x114c1f0_0 .net "b_bar", 0 0, L_0x114d740; 1 drivers
+v0x114c2a0_0 .alias "out", 0 0, v0x114c940_0;
+v0x114c340_0 .net "x", 0 0, L_0x114d7f0; 1 drivers
+v0x114c420_0 .net "y", 0 0, L_0x114d8a0; 1 drivers
+S_0x1135330 .scope module, "d_flip_flop" "d_flip_flop" 3 20;
+ .timescale 0 0;
+v0x114ca60_0 .net "clk", 0 0, C4<z>; 0 drivers
+v0x114cb20_0 .net "d", 0 0, C4<z>; 0 drivers
+v0x114cbc0_0 .var "q", 0 0;
+v0x114cc60_0 .net "rst", 0 0, C4<z>; 0 drivers
+E_0x114ca10 .event posedge, v0x114cc60_0, v0x114ca60_0;
+S_0x1135420 .scope module, "stream_cipher" "stream_cipher" 3 59;
+ .timescale 0 0;
+P_0x112e648 .param/l "BITS" 3 59, +C4<01000000>;
+v0x114d220_0 .var "ciphered_message", 63 0;
+v0x114d2e0_0 .net "clk", 0 0, C4<z>; 0 drivers
+v0x114d390_0 .net "message", 63 0, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; 0 drivers
+v0x114d440_0 .net "otp", 31 0, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; 0 drivers
+v0x114d4f0_0 .net "rst", 0 0, C4<z>; 0 drivers
+v0x114d5a0_0 .net "shift_register_out", 63 0, v0x114d030_0; 1 drivers
+S_0x114cd10 .scope module, "sr" "shift_register" 3 70, 3 38, S_0x1135420;
+ .timescale 0 0;
+P_0x114c848 .param/l "WIDTH" 3 38, +C4<01000000>;
+v0x114ced0_0 .alias "clk", 0 0, v0x114d2e0_0;
+v0x114cf90_0 .alias "data_in", 63 0, v0x114d390_0;
+v0x114d030_0 .var "data_out", 63 0;
+v0x114d0d0_0 .alias "rst", 0 0, v0x114d4f0_0;
+v0x114d180_0 .net "shift_enable", 0 0, C4<1>; 1 drivers
+E_0x114ce40 .event posedge, v0x114d0d0_0, v0x114ced0_0;
+    .scope S_0x1121800;
+T_0 ;
+    %movi 8, 1701601651, 32;
+    %movi 40, 1702065266, 32;
+    %set/v v0x114c7c0_0, 8, 64;
+    %end;
+    .thread T_0;
+    .scope S_0x1121800;
+T_1 ;
+    %movi 8, 1718187621, 32;
+    %set/v v0x114c8a0_0, 8, 32;
+    %end;
+    .thread T_1;
+    .scope S_0x1121800;
+T_2 ;
+    %vpi_call 2 17 "$dumpfile", "dump.vcd";
+    %vpi_call 2 18 "$dumpvars", 2'sb01, v0x114c4c0_0, v0x114c560_0, v0x114c940_0;
+    %end;
+    .thread T_2;
+    .scope S_0x1121800;
+T_3 ;
+    %movi 8, 8, 32;
+    %set/v v0x114c690_0, 8, 32;
+    %end;
+    .thread T_3;
+    .scope S_0x1121800;
+T_4 ;
+    %set/v v0x114c610_0, 0, 32;
+    %end;
+    .thread T_4;
+    .scope S_0x1121800;
+T_5 ;
+    %movi 8, 63, 32;
+    %set/v v0x114c740_0, 8, 32;
+T_5.0 ;
+    %load/v 8, v0x114c740_0, 32;
+    %cmp/s 0, 8, 32;
+    %or 5, 4, 1;
+    %jmp/0xz T_5.1, 5;
+    %ix/getv/s 1, v0x114c740_0;
+    %jmp/1 T_5.2, 4;
+    %load/x1p 8, v0x114c7c0_0, 1;
+    %jmp T_5.3;
+T_5.2 ;
+    %mov 8, 2, 1;
+T_5.3 ;
+; Save base=8 wid=1 in lookaside.
+    %set/v v0x114c4c0_0, 8, 1;
+    %movi 8, 32, 32;
+    %load/v 40, v0x114c740_0, 32;
+    %cmp/s 8, 40, 32;
+    %or 5, 4, 1;
+    %mov 8, 5, 1;
+    %jmp/0  T_5.4, 8;
+    %load/v 9, v0x114c740_0, 32;
+    %subi 9, 32, 32;
+    %ix/get/s 1, 9, 32;
+    %jmp/1 T_5.7, 4;
+    %load/x1p 9, v0x114c8a0_0, 1;
+    %jmp T_5.8;
+T_5.7 ;
+    %mov 9, 2, 1;
+T_5.8 ;
+; Save base=9 wid=1 in lookaside.
+    %jmp/1  T_5.6, 8;
+T_5.4 ; End of true expr.
+    %ix/getv/s 1, v0x114c740_0;
+    %jmp/1 T_5.9, 4;
+    %load/x1p 10, v0x114c8a0_0, 1;
+    %jmp T_5.10;
+T_5.9 ;
+    %mov 10, 2, 1;
+T_5.10 ;
+; Save base=10 wid=1 in lookaside.
+    %jmp/0  T_5.5, 8;
+ ; End of false expr.
+    %blend  9, 10, 1; Condition unknown.
+    %jmp  T_5.6;
+T_5.5 ;
+    %mov 9, 10, 1; Return false value
+T_5.6 ;
+    %set/v v0x114c560_0, 9, 1;
+    %delay 1, 0;
+    %vpi_call 2 34 "$write", v0x114c940_0;
+    %load/v 8, v0x114c610_0, 32;
+    %mov 40, 39, 1;
+    %addi 8, 1, 33;
+    %set/v v0x114c610_0, 8, 32;
+    %load/v 8, v0x114c610_0, 32;
+    %load/v 40, v0x114c690_0, 32;
+    %cmp/u 8, 40, 32;
+    %jmp/0xz  T_5.11, 4;
+    %vpi_call 2 41 "$write", " ";
+    %set/v v0x114c610_0, 0, 32;
+T_5.11 ;
+    %load/v 8, v0x114c740_0, 32;
+    %subi 8, 1, 32;
+    %set/v v0x114c740_0, 8, 32;
+    %jmp T_5.0;
+T_5.1 ;
+    %vpi_call 2 47 "$write", "\012";
+    %end;
+    .thread T_5;
+    .scope S_0x1135330;
+T_6 ;
+    %wait E_0x114ca10;
+    %load/v 8, v0x114cc60_0, 1;
+    %jmp/0xz  T_6.0, 8;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0x114cbc0_0, 0, 0;
+    %jmp T_6.1;
+T_6.0 ;
+    %load/v 8, v0x114cb20_0, 1;
+    %ix/load 0, 1, 0;
+    %assign/v0 v0x114cbc0_0, 0, 8;
+T_6.1 ;
+    %jmp T_6;
+    .thread T_6;
+    .scope S_0x114cd10;
+T_7 ;
+    %wait E_0x114ce40;
+    %load/v 8, v0x114d0d0_0, 1;
+    %jmp/0xz  T_7.0, 8;
+    %ix/load 0, 64, 0;
+    %assign/v0 v0x114d030_0, 0, 0;
+    %jmp T_7.1;
+T_7.0 ;
+    %load/v 8, v0x114d180_0, 1;
+    %jmp/0xz  T_7.2, 8;
+    %ix/load 1, 1, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_7.4, 4;
+    %load/x1p 72, v0x114d030_0, 63;
+    %jmp T_7.5;
+T_7.4 ;
+    %mov 72, 2, 63;
+T_7.5 ;
+    %mov 8, 72, 63; Move signal select into place
+    %ix/load 1, 63, 0;
+    %mov 4, 0, 1;
+    %jmp/1 T_7.6, 4;
+    %load/x1p 72, v0x114cf90_0, 1;
+    %jmp T_7.7;
+T_7.6 ;
+    %mov 72, 2, 1;
+T_7.7 ;
+    %mov 71, 72, 1; Move signal select into place
+    %ix/load 0, 64, 0;
+    %assign/v0 v0x114d030_0, 0, 8;
+T_7.2 ;
+T_7.1 ;
+    %jmp T_7;
+    .thread T_7;
+    .scope S_0x1135420;
+T_8 ;
+    %wait E_0x114ce40;
+    %load/v 8, v0x114d4f0_0, 1;
+    %jmp/0xz  T_8.0, 8;
+    %ix/load 0, 64, 0;
+    %assign/v0 v0x114d220_0, 0, 0;
+    %jmp T_8.1;
+T_8.0 ;
+    %load/v 8, v0x114d5a0_0, 64;
+    %mov 72, 0, 32;
+    %load/v 104, v0x114d440_0, 32;
+    %xor 8, 72, 64;
+    %ix/load 0, 64, 0;
+    %assign/v0 v0x114d220_0, 0, 8;
+T_8.1 ;
+    %jmp T_8;
+    .thread T_8;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "testbench.sv";
+    "design.sv";
