@@ -1,0 +1,112 @@
+html, 
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "lato", Arial, Helvetica, sans-serif;
+}
+
+body{
+    font-family: "lato", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.top-bar{
+    background-color: #FF6B28;
+    text-align: center;
+    padding: 15px;
+}
+
+.top-logo{
+    height: 36px;
+}
+
+#header{
+    background: url("./assets/arquivos_projeto_pagina-receitas/images/hero_bolo.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+}
+
+.content{
+    max-width: 990px;
+    margin: auto;
+    padding: 0 40px;
+    margin-top: 100px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #FF6B28;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2{
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.card{
+    padding: 70px 100px;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.card:hover{
+    box-shadow: 8px 8px 15px 12px rgba(205, 205, 205, 0.25);
+}
+
+.ingredients{
+    cursor: url("./assets/arquivos_projeto_pagina-receitas/images/cursor_ingredientes.png"), auto;
+}
+
+.preparation{
+    cursor: url("./assets/arquivos_projeto_pagina-receitas/images/cursor_preparo.png"), auto;    
+}
+
+.instructions{
+    cursor: url("./assets/arquivos_projeto_pagina-receitas/images/cursor_intrucoes.png"), auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+.buy-button{
+    background-color: #FF6B28;
+    padding: 16px;
+    border-radius: 20px;
+    color: white;
+}
+
+li{
+    margin-bottom: 14px;
+}
+
+.ingredients-list{
+    margin-bottom: 50px;
+}
+
+p,
+li{
+    line-height: 28px;
+}
+
+.footer{
+    background-color: #FF6B28;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.footer-text{
+    max-width: 500px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.text-white{
+    color: white;
+}
