@@ -1,0 +1,17 @@
+Estatísticas da Temporada 2019-2020 da Premier League:
+Mandante:
+  Mínimo: 0
+  Máximo: 8
+  Média: 1.5157894736842106
+Visitante:
+  Mínimo: 0
+  Máximo: 9
+  Média: 1.2052631578947368
+Total:
+  Mínimo: 0
+  Máximo: 9
+  Média: 2.721052631578947
+Diferença:
+  Mínimo: -9
+  Máximo: 8
+  Média: 0.3105263157894737

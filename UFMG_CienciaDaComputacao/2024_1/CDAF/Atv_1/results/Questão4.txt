@@ -1,0 +1,160 @@
+                 Generalized Linear Model Regression Results                  
+==============================================================================
+Dep. Variable:                  goals   No. Observations:                  760
+Model:                            GLM   Df Residuals:                      720
+Model Family:                 Poisson   Df Model:                           39
+Link Function:                    Log   Scale:                          1.0000
+Method:                          IRLS   Log-Likelihood:                -1057.7
+Date:                Mon, 08 Apr 2024   Deviance:                       765.20
+Time:                        18:44:04   Pearson chi2:                     655.
+No. Iterations:                     5   Pseudo R-squ. (CS):             0.2118
+Covariance Type:            nonrobust                                         
+=================================================================================================
+                                    coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------
+Intercept                         0.1957      0.202      0.967      0.334      -0.201       0.593
+team[T.Aston Villa]              -0.2932      0.206     -1.424      0.154      -0.697       0.110
+team[T.Bournemouth]              -0.3200      0.207     -1.544      0.123      -0.726       0.086
+team[T.Brighton]                 -0.3566      0.209     -1.708      0.088      -0.766       0.053
+team[T.Burnley]                  -0.2628      0.203     -1.294      0.196      -0.661       0.135
+team[T.Chelsea]                   0.2157      0.180      1.197      0.231      -0.137       0.569
+team[T.Crystal Palace]           -0.5906      0.224     -2.636      0.008      -1.030      -0.151
+team[T.Everton]                  -0.2336      0.202     -1.158      0.247      -0.629       0.162
+team[T.Leicester City]            0.1727      0.181      0.952      0.341      -0.183       0.528
+team[T.Liverpool]                 0.4031      0.172      2.339      0.019       0.065       0.741
+team[T.Manchester City]           0.5881      0.167      3.530      0.000       0.262       0.915
+team[T.Manchester United]         0.1525      0.182      0.838      0.402      -0.204       0.509
+team[T.Newcastle United]         -0.3786      0.210     -1.799      0.072      -0.791       0.034
+team[T.Norwich City]             -0.7416      0.238     -3.121      0.002      -1.207      -0.276
+team[T.Sheffield United]         -0.3716      0.209     -1.780      0.075      -0.781       0.038
+team[T.Southampton]              -0.0815      0.194     -0.420      0.674      -0.461       0.298
+team[T.Tottenham Hotspur]         0.0847      0.185      0.457      0.647      -0.279       0.448
+team[T.Watford]                  -0.4266      0.214     -1.995      0.046      -0.846      -0.007
+team[T.West Ham United]          -0.1195      0.196     -0.610      0.542      -0.504       0.264
+team[T.Wolverhampton]            -0.1019      0.194     -0.526      0.599      -0.482       0.278
+opponent[T.Aston Villa]           0.3191      0.189      1.685      0.092      -0.052       0.690
+opponent[T.Bournemouth]           0.2876      0.191      1.509      0.131      -0.086       0.661
+opponent[T.Brighton]              0.1008      0.199      0.507      0.612      -0.289       0.490
+opponent[T.Burnley]               0.0277      0.202      0.137      0.891      -0.369       0.424
+opponent[T.Chelsea]               0.1316      0.199      0.663      0.508      -0.258       0.521
+opponent[T.Crystal Palace]        0.0156      0.202      0.077      0.938      -0.381       0.412
+opponent[T.Everton]               0.1423      0.197      0.722      0.470      -0.244       0.528
+opponent[T.Leicester City]       -0.1468      0.213     -0.689      0.491      -0.564       0.271
+opponent[T.Liverpool]            -0.3459      0.226     -1.527      0.127      -0.790       0.098
+opponent[T.Manchester City]      -0.2690      0.223     -1.208      0.227      -0.705       0.167
+opponent[T.Manchester United]    -0.2782      0.221     -1.260      0.208      -0.711       0.154
+opponent[T.Newcastle United]      0.1714      0.195      0.877      0.380      -0.212       0.554
+opponent[T.Norwich City]          0.4168      0.185      2.252      0.024       0.054       0.780
+opponent[T.Sheffield United]     -0.2252      0.216     -1.044      0.297      -0.648       0.198
+opponent[T.Southampton]           0.2187      0.194      1.128      0.260      -0.161       0.599
+opponent[T.Tottenham Hotspur]    -0.0160      0.206     -0.078      0.938      -0.419       0.387
+opponent[T.Watford]               0.2680      0.191      1.402      0.161      -0.107       0.643
+opponent[T.West Ham United]       0.2495      0.193      1.296      0.195      -0.128       0.627
+opponent[T.Wolverhampton]        -0.1878      0.214     -0.876      0.381      -0.608       0.232
+home                              0.2292      0.063      3.662      0.000       0.107       0.352
+=================================================================================================
+
+Expectativa de gols para Liverpool jogando em casa contra Chelsea: 2.6108448128340416
+Expectativa de gols para Chelsea jogando fora contra Liverpool: 1.0677078615985134
+
+Grid de Probabilidades para o Placar:
+Liverpool 0 - 0 Chelsea: 0.0253
+Liverpool 0 - 1 Chelsea: 0.0270
+Liverpool 0 - 2 Chelsea: 0.0144
+Liverpool 0 - 3 Chelsea: 0.0051
+Liverpool 0 - 4 Chelsea: 0.0014
+Liverpool 0 - 5 Chelsea: 0.0003
+Liverpool 0 - 6 Chelsea: 0.0001
+Liverpool 0 - 7 Chelsea: 0.0000
+Liverpool 0 - 8 Chelsea: 0.0000
+Liverpool 0 - 9 Chelsea: 0.0000
+Liverpool 1 - 0 Chelsea: 0.0659
+Liverpool 1 - 1 Chelsea: 0.0704
+Liverpool 1 - 2 Chelsea: 0.0376
+Liverpool 1 - 3 Chelsea: 0.0134
+Liverpool 1 - 4 Chelsea: 0.0036
+Liverpool 1 - 5 Chelsea: 0.0008
+Liverpool 1 - 6 Chelsea: 0.0001
+Liverpool 1 - 7 Chelsea: 0.0000
+Liverpool 1 - 8 Chelsea: 0.0000
+Liverpool 1 - 9 Chelsea: 0.0000
+Liverpool 2 - 0 Chelsea: 0.0861
+Liverpool 2 - 1 Chelsea: 0.0919
+Liverpool 2 - 2 Chelsea: 0.0491
+Liverpool 2 - 3 Chelsea: 0.0175
+Liverpool 2 - 4 Chelsea: 0.0047
+Liverpool 2 - 5 Chelsea: 0.0010
+Liverpool 2 - 6 Chelsea: 0.0002
+Liverpool 2 - 7 Chelsea: 0.0000
+Liverpool 2 - 8 Chelsea: 0.0000
+Liverpool 2 - 9 Chelsea: 0.0000
+Liverpool 3 - 0 Chelsea: 0.0749
+Liverpool 3 - 1 Chelsea: 0.0800
+Liverpool 3 - 2 Chelsea: 0.0427
+Liverpool 3 - 3 Chelsea: 0.0152
+Liverpool 3 - 4 Chelsea: 0.0041
+Liverpool 3 - 5 Chelsea: 0.0009
+Liverpool 3 - 6 Chelsea: 0.0002
+Liverpool 3 - 7 Chelsea: 0.0000
+Liverpool 3 - 8 Chelsea: 0.0000
+Liverpool 3 - 9 Chelsea: 0.0000
+Liverpool 4 - 0 Chelsea: 0.0489
+Liverpool 4 - 1 Chelsea: 0.0522
+Liverpool 4 - 2 Chelsea: 0.0279
+Liverpool 4 - 3 Chelsea: 0.0099
+Liverpool 4 - 4 Chelsea: 0.0026
+Liverpool 4 - 5 Chelsea: 0.0006
+Liverpool 4 - 6 Chelsea: 0.0001
+Liverpool 4 - 7 Chelsea: 0.0000
+Liverpool 4 - 8 Chelsea: 0.0000
+Liverpool 4 - 9 Chelsea: 0.0000
+Liverpool 5 - 0 Chelsea: 0.0255
+Liverpool 5 - 1 Chelsea: 0.0273
+Liverpool 5 - 2 Chelsea: 0.0146
+Liverpool 5 - 3 Chelsea: 0.0052
+Liverpool 5 - 4 Chelsea: 0.0014
+Liverpool 5 - 5 Chelsea: 0.0003
+Liverpool 5 - 6 Chelsea: 0.0001
+Liverpool 5 - 7 Chelsea: 0.0000
+Liverpool 5 - 8 Chelsea: 0.0000
+Liverpool 5 - 9 Chelsea: 0.0000
+Liverpool 6 - 0 Chelsea: 0.0111
+Liverpool 6 - 1 Chelsea: 0.0119
+Liverpool 6 - 2 Chelsea: 0.0063
+Liverpool 6 - 3 Chelsea: 0.0023
+Liverpool 6 - 4 Chelsea: 0.0006
+Liverpool 6 - 5 Chelsea: 0.0001
+Liverpool 6 - 6 Chelsea: 0.0000
+Liverpool 6 - 7 Chelsea: 0.0000
+Liverpool 6 - 8 Chelsea: 0.0000
+Liverpool 6 - 9 Chelsea: 0.0000
+Liverpool 7 - 0 Chelsea: 0.0041
+Liverpool 7 - 1 Chelsea: 0.0044
+Liverpool 7 - 2 Chelsea: 0.0024
+Liverpool 7 - 3 Chelsea: 0.0008
+Liverpool 7 - 4 Chelsea: 0.0002
+Liverpool 7 - 5 Chelsea: 0.0000
+Liverpool 7 - 6 Chelsea: 0.0000
+Liverpool 7 - 7 Chelsea: 0.0000
+Liverpool 7 - 8 Chelsea: 0.0000
+Liverpool 7 - 9 Chelsea: 0.0000
+Liverpool 8 - 0 Chelsea: 0.0014
+Liverpool 8 - 1 Chelsea: 0.0014
+Liverpool 8 - 2 Chelsea: 0.0008
+Liverpool 8 - 3 Chelsea: 0.0003
+Liverpool 8 - 4 Chelsea: 0.0001
+Liverpool 8 - 5 Chelsea: 0.0000
+Liverpool 8 - 6 Chelsea: 0.0000
+Liverpool 8 - 7 Chelsea: 0.0000
+Liverpool 8 - 8 Chelsea: 0.0000
+Liverpool 8 - 9 Chelsea: 0.0000
+Liverpool 9 - 0 Chelsea: 0.0004
+Liverpool 9 - 1 Chelsea: 0.0004
+Liverpool 9 - 2 Chelsea: 0.0002
+Liverpool 9 - 3 Chelsea: 0.0001
+Liverpool 9 - 4 Chelsea: 0.0000
+Liverpool 9 - 5 Chelsea: 0.0000
+Liverpool 9 - 6 Chelsea: 0.0000
+Liverpool 9 - 7 Chelsea: 0.0000
+Liverpool 9 - 8 Chelsea: 0.0000
+Liverpool 9 - 9 Chelsea: 0.0000
