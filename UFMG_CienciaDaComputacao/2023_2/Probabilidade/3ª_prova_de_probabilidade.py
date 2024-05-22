@@ -80,4 +80,3 @@ plotar_histograma(amostras_uniforme.flatten(), 'Amostras - Uniforme', 'Valores',
 medias_uniforme = np.mean(amostras_uniforme, axis=1)
 plotar_histograma(medias_uniforme, 'Médias Amostrais - Uniforme', 'Valores', 'Densidade')
 analisar_tcl('uniform', (a, b-a), n, m)
-
